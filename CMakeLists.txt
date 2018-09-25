@@ -1,11 +1,10 @@
 #
-#
 # top level build file for the sockaddrutil library
 
 ## prepare CMAKE
 cmake_minimum_required ( VERSION 3.2.0 )
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
-include ( Uncrustify )
+#include ( Uncrustify )
 include ( GetGitRevisionDescription )
 git_describe(VERSION --tags --dirty=-d)
 
@@ -90,7 +89,7 @@ endif ()
 ## include the parts
 add_subdirectory ( include )
 add_subdirectory ( src )
-add_subdirectory ( test )
+#add_subdirectory ( test )
 
 
 install (FILES AUTHORS LICENSE README.md DESTINATION .)
@@ -120,9 +119,9 @@ endforeach()
 set ( CPACK_PACKAGE_DESCRIPTION_FILE ${CMAKE_CURRENT_SOURCE_DIR}/README.md )
 set ( CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE" )
 
-include ( CPack )
-include ( CTest )
-include ( LCov )
+#include ( CPack )
+#include ( CTest )
+#include ( LCov )
 
 UncrustifyTop(${uncrustify})
 
